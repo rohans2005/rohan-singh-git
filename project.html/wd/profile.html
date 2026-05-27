@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#1f1f1f;
+    }
+
+    .card{
+      width:300px;
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .card h2{
+      margin-bottom:20px;
+      color:#333;
+    }
+
+    /* Circle Image */
+    .profile-img{
+      width:120px;
+
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      margin:0 auto 20px;
+      border:4px solid #007bff;
+    }
+
+    .profile-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .name{
+      font-size:24px;
+      font-weight:bold;
+      color:#222;
+    }
+
+    .role{
+      color:gray;
+      margin-top:5px;
+      margin-bottom:20px;
+    }
+
+    .follow-btn{
+      padding:10px 25px;
+      border:none;
+      background:#007bff;
+      color:white;
+      font-size:16px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .follow-btn:hover{
+      background:#0056b3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>Profile</h2>
+
+    <!-- Circle Image -->
+    <div class="profile-img">
+      <img src="https://i.pinimg.com/736x/0e/d5/8c/0ed58cccd51c4758e634d0b29e8cb0c2.jpg" alt="Profile Image">
+    </div>
+
+    <div class="name">Virat Kohli</div>
+    <div class="role">Cricketer</div>
+
+    <button class="follow-btn">Follow</button>
+  </div>
+
+</body>
+</html>
