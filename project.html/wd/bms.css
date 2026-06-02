@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #7a7a7a;
+  --primary-color: crimson;
+  --bg-light: #f5f5f5;
+  --bg-dark: #1e1e1e;
+}
+
+body {
+  font-family: "Roboto", "Outfit", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+/* ******* NAVBAR ********* */
+.navbar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.right-nav li {
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.right-nav li:hover {
+  color: var(--primary-color);
+}
+
+.right-nav button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.right-nav button:hover {
+  background-color: #b31217;
+}
+
+/* ******* Search Box ******** */
+.search-bx {
+  border: 1px solid #d2d2d2;
+  color: gray;
+  padding: 8px 12px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.search-bx input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bx input::placeholder {
+  color: var(--text-color);
+}
+
+/* ******* Sub-Navbar ******** */
+.sub-navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 40px;
+}
+
+.sub-navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.sub-navbar a:hover {
+  color: var(--primary-color);
+}
+
+.sub-navbar .left-links,
+.sub-navbar .right-links {
+  display: flex;
+  gap: 20px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  opacity: 0.4;
+  margin: 10px auto;
+  width: 95%;
+}
+
+/* ****** HERO SECTION ******* */
+.poster img {
+  width: 100%;
+  display: block;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin: 20px 100px;
+  color: #222;
+}
+
+.set {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 70px 0 -50px;
+}
+
+.set span {
+  color: var(--primary-color);
+}
+
+.movies {
+  position: relative;
+  margin: 0 20px;
+}
+
+.movies .img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+.movie-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  padding: 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+.info img {
+  margin-left: 5px;
+}
+
+.info p {
+  font-size: 14px;
+}
+
+/* ****** IMAGE SECTION ******* */
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  margin: 60px;
+  width: 90%;
+  border-radius: 8px;
+}
+
+/* ****** EVENTS SECTION ******* */
+.events h2 {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.event-card {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.event-card img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* ****** ARTIST SECTION ******* */
+.artist h2 {
+  margin-left: 40px;
+  color: #222;
+}
+
+.artist-card {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.artist-card img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+/* ****** FOOTER ******* */
+footer {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--bg-dark);
+  color: #f2f2f2;
+  padding: 40px 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer h2 {
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer p {
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer p:hover {
+  color: #fff;
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.foot p {
+  max-width: 900px;
+  color: #999;
+  line-height: 1.6;
+  font-size: 14px;
+}
