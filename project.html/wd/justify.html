@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container{
+    width:800px;
+    height:500px;
+    border:2px solid black;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(4,1fr);
+    
+}
+
+.box{
+    width:60px;
+    height:40px;
+    background:red;
+    border:2px solid blue;
+}
+
+
+.b1{justify-self:start; align-self:start;}
+.b2{justify-self:center; align-self:center;}
+.b3{justify-self:end; align-self:start;}
+
+
+.b4{justify-self:center; align-self:center;}
+.b5{justify-self:end; align-self:end;}
+.b6{justify-self:center; align-self:center;}
+
+
+.b7{justify-self:end; align-self:start;}
+.b8{justify-self:center; align-self:center;}
+.b9{justify-self:end; align-self:end;}
+
+
+.b10{justify-self:start; align-self:end;}
+.b11{justify-self:center; align-self:center;}
+.b12{justify-self:end; align-self:end;}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box b1"></div>
+    <div class="box b2"></div>
+    <div class="box b3"></div>
+
+    <div class="box b4"></div>
+    <div class="box b5"></div>
+    <div class="box b6"></div>
+
+    <div class="box b7"></div>
+    <div class="box b8"></div>
+    <div class="box b9"></div>
+
+    <div class="box b10"></div>
+    <div class="box b11"></div>
+    <div class="box b12"></div>
+</div>
+
+</body>
+</html>

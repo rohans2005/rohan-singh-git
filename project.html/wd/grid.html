@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Example</title>
+  <style>
+    .container {
+      display: grid;
+      width: 800px;
+      height: 400px;
+      grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+      grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+      gap: 10px; /* spacing between grid items */
+      border: 2px solid black; 
+      margin: 20px auto; 
+    }
+
+    .item {
+      background-color: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+  </div>
+</body>
+</html>
+

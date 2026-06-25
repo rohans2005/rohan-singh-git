@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ixigo Clone</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:white;
+}
+
+/* Header */
+
+header{
+    height:80px;
+    background:white;
+    border-bottom:1px solid white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+}
+
+.logo{
+    background:rgb(255, 132, 0);
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+    padding:5px 12px;
+    border-radius:8px;
+}
+
+.right-nav{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    font-size:22px;
+}
+
+.profile{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Main Card */
+
+.booking-card{
+    width:96%;
+    margin:20px auto;
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 3px 12px black;
+}
+
+/* Transport Tabs */
+
+.transport{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.tabs{
+    display:flex;
+    gap:50px;
+}
+
+.tab{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    padding-bottom:12px;
+}
+
+.active-tab{
+    border-bottom:4px solid blue;
+}
+
+.tab i{
+    font-size:30px;
+    color:blue;
+}
+
+.heading{
+    font-size:18px;
+}
+
+/* Trip Buttons */
+
+.trip{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.trip button{
+    padding:12px 28px;
+    border-radius:30px;
+    border:1px solid white;
+    background:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.trip .active{
+    border:2px solid blue;
+    color:blue;
+}
+
+/* Search Section */
+
+.search-box{
+    display:grid;
+    grid-template-columns:2fr 2fr 1.3fr 1.3fr 1.4fr 1fr;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.field{
+    background:white;
+    border-right:1px solid white;
+    padding:18px;
+    height:90px;
+}
+
+.field:last-child{
+    border:none;
+}
+
+.label{
+    color:grey;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.value{
+    font-size:28px;
+    font-weight:600;
+}
+
+.search-btn{
+    background:rgb(255, 153, 0);
+    color:white;
+    border:none;
+    font-size:34px;
+    cursor:pointer;
+}
+
+/* Special Fare */
+
+.special{
+    margin-top:25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.special span{
+    font-size:22px;
+    font-weight:600;
+}
+
+.pill{
+    border:1px solid white;
+    padding:10px 20px;
+    border-radius:25px;
+}
+
+/* Cancellation */
+
+.cancel{
+    margin-top:20px;
+    background:white;
+    border-radius:10px;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* Do More */
+
+.section{
+    width:96%;
+    margin:25px auto;
+}
+
+.section h2{
+    margin-bottom:20px;
+}
+
+.cards{
+    background:white;
+    border-radius:20px;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    box-shadow:0 3px 12px black;
+}
+
+.card{
+    padding:35px 15px;
+    text-align:center;
+    border-right:1px solid white;
+}
+
+.card:last-child{
+    border:none;
+}
+
+.card i{
+    font-size:45px;
+    color:blue;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:20px;
+    font-weight:500;
+}
+
+/* Offer Tabs */
+
+.offer-head{
+    width:96%;
+    margin:20px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.offer-tabs{
+    display:flex;
+    gap:10px;
+}
+
+.offer-tabs button{
+    padding:10px 20px;
+    border-radius:25px;
+    border:1px solid white;
+    background:white;
+}
+
+.offer-tabs .active{
+    background:blue;
+    color:white;
+}
+
+@media(max-width:1200px){
+
+.search-box{
+grid-template-columns:1fr;
+}
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+.tabs{
+flex-wrap:wrap;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">ixigo</div>
+
+<div class="right-nav">
+<div><i class="fa-solid fa-tags"></i> Offers</div>
+<div><i class="fa-solid fa-headset"></i> Customer Service</div>
+<div class="profile">
+<i class="fa-solid fa-user"></i>
+</div>
+<div>Log in / Sign up</div>
+</div>
+
+</header>
+
+<div class="booking-card">
+
+<div class="transport">
+
+<div class="tabs">
+
+<div class="tab active-tab">
+<i class="fa-solid fa-plane"></i>
+Flights
+</div>
+
+<div class="tab">
+<i class="fa-solid fa-hotel"></i>
+Hotels
+</div>
+
+<div class="tab">
+<i class="fa-solid fa-train"></i>
+Trains
+</div>
+
+<div class="tab">
+<i class="fa-solid fa-bus"></i>
+Buses
+</div>
+
+</div>
+
+<div class="heading">
+Book International and Domestic Flights
+</div>
+
+</div>
+
+<div class="trip">
+<button class="active">One Way</button>
+<button>Round Trip</button>
+</div>
+
+<div class="search-box">
+
+<div class="field">
+<div class="label">From</div>
+<div class="value">Delhi</div>
+</div>
+
+<div class="field">
+<div class="label">To</div>
+<div class="value">Mumbai</div>
+</div>
+
+<div class="field">
+<div class="label">Departure</div>
+<div class="value">25 Jun</div>
+</div>
+
+<div class="field">
+<div class="label">Return</div>
+<div class="value">Add</div>
+</div>
+
+<div class="field">
+<div class="label">Travellers & Class</div>
+<div class="value">1 Adult</div>
+</div>
+
+<button class="search-btn">
+Search →
+</button>
+
+</div>
+
+<div class="special">
+<span>Special Fares :</span>
+<div class="pill">Student</div>
+<div class="pill">Senior Citizen</div>
+<div class="pill">Armed Forces</div>
+</div>
+
+<div class="cancel">
+<div>
+☑ Always opt for Free Cancellation • ₹0 cancellation fee • Instant refunds • Priority support
+</div>
+<div>
+🛡️
+</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Do More With ixigo</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa-solid fa-plane-departure"></i>
+<h3>Flight Tracker</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-credit-card"></i>
+<h3>Credit Card</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-passport"></i>
+<h3>Book Visa</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h3>Group Booking</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-map"></i>
+<h3>Plan</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bell"></i>
+<h3>Fare Alerts</h3>
+</div>
+
+</div>
+
+</div>
+
+<div class="offer-head">
+
+<h2>Offers For You</h2>
+
+<div class="offer-tabs">
+<button class="active">Flights</button>
+<button>Hotels</button>
+<button>Bank Offers</button>
+<button>Trains</button>
+</div>
+
+</div>
+
+</body>
+</html>

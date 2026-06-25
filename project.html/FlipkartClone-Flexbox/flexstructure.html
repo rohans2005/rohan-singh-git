@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:800px;
+    height:500px;
+    border:3px solid black;
+    display:flex;
+    gap:10px;
+    padding:10px;
+}
+
+.left{
+    width:25%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.top-left{
+    height:30%;
+}
+
+.bottom-left{
+    flex:1;
+}
+
+.right{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.top-right{
+    height:35%;
+}
+
+.bottom-row{
+    flex:1;
+    display:flex;
+    gap:10px;
+}
+
+.bottom-row .box{
+    flex:1;
+}
+
+.box{
+    border:3px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <div class="box top-left"></div>
+        <div class="box bottom-left"></div>
+    </div>
+
+    <div class="right">
+        <div class="box top-right"></div>
+
+        <div class="bottom-row">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

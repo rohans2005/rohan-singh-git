@@ -1,58 +1,110 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signal Light</title>
-
+    <title>Project Gallery</title>
     <style>
-
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-
-            /* Light background */
-            background-color: #f5f5f5;
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --border: #dfe3e8;
+            --text: #1f2937;
+            --accent: #2563eb;
         }
-
-        .signal{
-            width: 120px;
-            padding: 20px;
-            background-color: rgb(7, 7, 7);
-            border-radius: 20px;
-            border: 4px solid black;
+        * {
+            box-sizing: border-box;
         }
-
-        .light{
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin: 15px auto;
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #eef4ff 0%, #f8fafc 100%);
+            color: var(--text);
         }
-
-        .red{
-            background-color: red;
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 24px 48px;
         }
-
-        .yellow{
-            background-color: yellow;
+        header {
+            text-align: center;
+            margin-bottom: 32px;
         }
-
-        .green{
-            background-color: green;
+        header h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2rem, 2.7vw, 3rem);
         }
-
+        header p {
+            margin: 0;
+            color: #5b6476;
+            line-height: 1.7;
+        }
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+        .card {
+            display: block;
+            padding: 22px;
+            border-radius: 18px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            color: inherit;
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            border-color: rgba(37, 99, 235, 0.16);
+        }
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+        }
+        .card p {
+            margin: 0;
+            color: #5b6476;
+            line-height: 1.6;
+            font-size: 0.96rem;
+        }
+        .section-title {
+            margin: 44px 0 16px;
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            color: #102a43;
+        }
     </style>
 </head>
 <body>
-
-    <div class="signal">
-        <div class="light red"></div>
-        <div class="light yellow"></div>
-        <div class="light green"></div>
-    </div>
-
+    <main class="page">
+        <header>
+            <h1>Project Folder</h1>
+            <p>Browse all pages in the main <code>project.html</code> folder plus the nested <code>wd</code> project pages.</p>
+        </header>
+        <section>
+            <h2 class="section-title">Main Projects</h2>
+            <div class="grid">
+                <a class="card" href="amazon.html"><h2>Amazon Page</h2><p>Open the Amazon-inspired project page.</p></a>
+                <a class="card" href="project.html"><h2>Signal Light</h2><p>View the interactive signal light demo.</p></a>
+                <a class="card" href="resume.html"><h2>Resume Page</h2><p>See the resume layout page.</p></a>
+                <a class="card" href="overflow.html"><h2>Overflow Page</h2><p>Open the overflow layout project.</p></a>
+            </div>
+        </section>
+        <section>
+            <h2 class="section-title">WD Projects</h2>
+            <div class="grid">
+                <a class="card" href="wd/Card.html"><h2>Card Layout</h2><p>Open the card component demo.</p></a>
+                <a class="card" href="wd/Flipkart.html"><h2>Flipkart Page</h2><p>Open the Flipkart-style page.</p></a>
+                <a class="card" href="wd/Position.html"><h2>Position Demo</h2><p>Open the CSS position demo.</p></a>
+                <a class="card" href="wd/profile.html"><h2>Profile Page</h2><p>View the profile project page.</p></a>
+                <a class="card" href="wd/youtube.html"><h2>YouTube Page</h2><p>Open the YouTube-style layout demo.</p></a>
+                <a class="card" href="wd/bms.html"><h2>BMS Page</h2><p>View the BMS web page.</p></a>
+                <a class="card" href="wd/flex.html"><h2>Flex Layout</h2><p>Open the flexbox layout demonstration.</p></a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
